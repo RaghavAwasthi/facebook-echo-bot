@@ -23,6 +23,7 @@ If you use a fat-jar then deploying on Heroku is as simple as a click. The only 
 * [Prerequisite](#prerequisite)
 * [Deploying on Heroku](#setup_heroku)
 * [Deploying on a local environment](#setup_local)
+* [Deploying on Google Cloud Platform](#setup_google)
 * [Config Environment Properties](#config_env)
 
 ### <a id="prerequisite"></a> Prerequisite
@@ -93,6 +94,23 @@ $ git push heroku master
 If you use a [fat-jar](https://devcenter.heroku.com/articles/deploying-executable-jar-files) then deploying on heroku is as simple as one click. The only requirement is to create the Heroku specific [Procfile](../Procfile) with a `Dyno` of type web.
 
 ---
+### <a id="setup_google"></a>Deploying on Google Cloud Platform
+* Make Sure you have a google account if you dont have one you can make one [here](https://accounts.google.com/SignUp?hl=en
+)
+* Open [Google Cloud Platform Console](https://console.cloud.google.com/projectselector/appengine/)
+* Select or create a new GCP project.
+* The Dashboard wil now open after you either select or create a new project(Recommended to create a new one).
+**Note the project ID. You'll need to supply this to Eclipse shortly.**
+* Now sign in to google account from Eclipse
+* Sign in to the Google account that is used to deploy your project to App Engine. Select the File > Sign in to Google… menu item.
+* Right click the project in the Package Explorer the project to open the context menu.
+* Select Deploy to App Engine Standard
+* A dialog pops up.
+* Select the account you want to deploy with.
+* The list of projects the account has access to loads. Select the one you want to deploy to.
+* Then Click OK.
+
+
 ### <a id="setup_local"></a>Deploying on a local environment [localhost](https://en.wikipedia.org/wiki/Localhost)
 Build the app with [Maven](https://maven.apache.org/); set up the HTTPS tunnel and deploy the app with [Ngrok](https://ngrok.com/):
 ```sh
